@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-class Manager : Employee
+class Manager : public Employee
 {
 public:
 	Manager() = default;
@@ -15,11 +15,19 @@ protected:
 public:
 	std::string get_firstname() override;
 	std::string get_lastname() override;
-	std::string PrintValues() override;
+	std::string get_notes() override;
+	int get_rating() const override;
+	double get_salary() override;
 
 	void set_title(std::string t);
 	std::string get_title();
 	void set_department(std::string d);
 	std::string get_department();
+
+	virtual std::ostream& print(std::ostream& out) const override
+	{
+		out << "Manager(" << firstname_ << "," << lastname_ << "," << efficiency_rating_ << "," << "$" << salary_ << "," << notes_ << "," << notes_ << title_ << department_<< ")" << "\n";
+		return out;
+	}
 };
 

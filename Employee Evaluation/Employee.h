@@ -41,21 +41,31 @@ protected:
 	std::vector<std::string> employees;
 
 public:
-	void set_firstname(std::string firstname);
+	void set_firstname(std::string const &firstname);
 	virtual std::string get_firstname();
 
-	void set_lastname(std::string lastname);
+	void set_lastname(std::string const &lastname);
 	virtual std::string get_lastname();
 
 	void set_rating(int e_rating);
-	int get_rating();
+	virtual int get_rating() const;
 
 	void set_salary(double s);
 	virtual double get_salary();
 
-	void set_notes(std::string n);
-	std::string get_notes();
+	void set_notes(std::string const &n);
+	virtual std::string get_notes();
 
-	virtual std::string PrintValues();
+	friend std::ostream& operator<<(std::ostream &out, const Employee &e)
+	{
+		
+		return e.print(out);
+	}
+
+	virtual std::ostream& print(std::ostream &out) const
+	{
+		out << "Employee(" << firstname_ << "," << lastname_ << "," << efficiency_rating_ << "," << "$" << salary_ << "," << notes_ << "," << notes_ << ")" << "\n";
+		return out;
+	}
 };
 

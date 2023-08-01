@@ -2,10 +2,20 @@
 //
 
 #include <iostream>
+#include <ostream>
+#include "Employee.h"
+#include "Manager.h"
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Employee emp("Colin", "Chavez", 5, 60000, "Space Cadet");
+
+    std::cout << emp;
+
+    Manager mgr("Fred", "Flintstone", 3, 40000, "Down to Earth", "Rock Pit Supervisor", "Construction");
+
+    std::cout << mgr;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
