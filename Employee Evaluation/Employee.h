@@ -64,7 +64,12 @@ public:
 
 	virtual std::ostream& print(std::ostream &out) const
 	{
-		out << "Employee(" << firstname_ << "," << lastname_ << "," << efficiency_rating_ << "," << "$" << salary_ << "," << notes_ << "," << notes_ << ")" << "\n";
+		out << "Employee: \n "
+			<< "First Name: " << firstname_ << "\n "
+			<< "Last Name: " << lastname_ << "\n "
+			<< "Efficiency Rating: " << efficiency_rating_ << "\n "
+			<< "Salary: " << "$" << salary_ << "\n"
+			<< "Notes: " << notes_ << "\n";
 		return out;
 	}
 };

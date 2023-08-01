@@ -9,13 +9,13 @@
 
 int main()
 {
-    Employee emp("Colin", "Chavez", 5, 60000, "Space Cadet");
+    Employee Employee_1("Colin", "Chavez", 3, 40000, "Space Cadet");
 
-    std::cout << emp;
+    std::cout << Employee_1;
 
-    Manager mgr("Fred", "Flintstone", 3, 40000, "Down to Earth", "Rock Pit Supervisor", "Construction");
+    Manager Manager_1("Fred", "Flintstone", 5, 60000, "Down to Earth", "Rock Pit Supervisor", "Construction");
 
-    std::cout << mgr;
+    std::cout << Manager_1;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

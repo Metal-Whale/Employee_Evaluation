@@ -26,7 +26,15 @@ public:
 
 	virtual std::ostream& print(std::ostream& out) const override
 	{
-		out << "Manager(" << firstname_ << "," << lastname_ << "," << efficiency_rating_ << "," << "$" << salary_ << "," << notes_ << "," << notes_ << title_ << department_<< ")" << "\n";
+		out << "\nManager: \n "
+			<< "Title: " << title_ << "\n"
+			<< "Department: " << department_ << "\n"
+			<< "First Name: " << firstname_ << "\n "
+			<< "Last Name: " << lastname_ << "\n "
+			<< "Efficiency Rating: " << efficiency_rating_ << "\n "
+			<< "Salary: " << "$" << salary_ << "\n"
+			<< "Notes: " << notes_ << "\n";
+
 		return out;
 	}
 };
