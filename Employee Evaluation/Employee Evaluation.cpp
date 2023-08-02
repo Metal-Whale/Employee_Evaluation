@@ -16,6 +16,7 @@ int main()
     Manager Manager_1("Fred", "Flintstone", 5, 60000, "Down to Earth", "Rock Pit Supervisor", "Construction");
 
     std::cout << Manager_1;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -19,12 +19,13 @@ public:
 	int get_rating() const override;
 	double get_salary() override;
 
-	void set_title(std::string t);
+	void set_title(std::string const &t);
 	std::string get_title();
-	void set_department(std::string d);
+	void set_department(std::string const &d);
 	std::string get_department();
 
-	virtual std::ostream& print(std::ostream& out) const override
+	//Overidden print function returns formatted output of protected fields of employee class
+	std::ostream& print(std::ostream& out) const override
 	{
 		out << "\nManager: \n "
 			<< "Title: " << title_ << "\n"

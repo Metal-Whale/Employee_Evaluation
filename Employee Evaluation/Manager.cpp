@@ -44,6 +44,15 @@ int Manager::get_rating() const
 	return efficiency_rating_;
 }
 
+void Manager::set_department(std::string  const &d)
+{
+	department_ = d;
+}
+
+void Manager::set_title(std::string const& t)
+{
+	title_ = t;
+}
 
 
 
